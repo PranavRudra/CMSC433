@@ -49,8 +49,8 @@ public class NoVisibility {
   - Monitor lock rule: an unlock on a monitor happens before every subsequent lock on same monitor
   - Volatile variable rule: a write to a volatile variable happens before every read from that variable
   - Thread start rule: a call to `Thread.start()` happens before every action in the started thread
-  - Thread termination rule: any action in a thread happens before another thread determines thread has terminated
-  - Interruption rule: thread calling an interrupt on another thread happens before interrupted thread detects interrupt
+  - Thread termination rule: any action in thread happens before other thread determines thread terminated
+  - Interruption rule: thread interrupting other thread happens before interrupted thread detects interrupt
 
 ## Volatility
 
