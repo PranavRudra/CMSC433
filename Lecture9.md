@@ -78,7 +78,7 @@ public class LatchExample{
 }
 ```
 
-## FutureTask<T>
+## FutureTask
 
 - enable asynchronous work
 
