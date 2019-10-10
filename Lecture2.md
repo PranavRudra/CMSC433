@@ -78,7 +78,7 @@ thread.join();      // Similar to while (thread.getState() != TERMINATED);
 - all threads are user threads by default
 - JVM exits when all user threads exit
 - daemon threads should be used for background work
-- user thread can only be made a daemon thread via `setDaemon()` when its state is NEW 
+- user thread can only be made a daemon thread via `setDaemon()` when its state is NEW
 
 ## Exceptions
 

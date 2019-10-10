@@ -10,13 +10,13 @@
 - publishing an inner object (exposes outer object via `this$0` field)
 - allowing `this`to escape from the constructor
 - starting a thread in the constructor
- 
+
 ```java
 public class MutablePoint {
     private Point p1;
     private Point p2;
     public Point getP1() {
-        return p1;              // caller of getP1() can now screw up the p1 object 
+        return p1;              // caller of getP1() can now screw up the p1 object
     }
 }
 ```
@@ -29,11 +29,12 @@ public class Unsafe {
     }
 }
 ```
+
 - use static factory methods to perform necessary work without unsafely publishing object
 
 ## Thread Confinement
 
-- stack-confined object: 
+- stack-confined object:
   - object is created in a thread
   - object is assigned to a local variable
   - object is never published outside the thread
@@ -78,7 +79,7 @@ class MyThread extends Thread {
 
 ## Immutability
 
-- immutability conditions: 
+- immutability conditions:
   - all of the object's fields are `final`
   - object's state never changes after construction
   - object is properly constructed (`this` does not escape during construction)
@@ -96,6 +97,7 @@ public class ImproperImmutableABimplements... {
     }
 }
 ```
+
 - initialization safety: all writes to `final` fields in immutable objects are visible immediately
 
 ## Misc
@@ -103,7 +105,7 @@ public class ImproperImmutableABimplements... {
 ```java
 public class Holder {
     private int n;
-    public Holder(int n) { 
+    public Holder(int n) {
         this.n = n;  
     }
     public void assertSanity() {
