@@ -159,7 +159,7 @@ public synchronized void put(Object o) {
 }
 
 public synchronized Object get() {
-    while (buf.size()==0) {
+    while (buf.size() == 0) {
         wait();
     }
     Object o = buf.remove(0);
@@ -180,7 +180,7 @@ public class BoundedBufferWaitNoNull{
     }
 
     public synchronized boolean put(Object elt) throws InterruptedException {
-        if (elt!= null) {
+        if (elt != null) {
             buffer.put(elt);
             return true;
         }
