@@ -17,7 +17,7 @@ public class ArrayBoundedBuffer{
     private final ArrayList<Object> items;
     private final int capacity;
     private final Lock lock = new ReentrantLock();
-    private final Condition notFull = lock.newCondition(); // waiting for not full
+    private final Condition notFull = lock.newCondition();  // waiting for not full
     private final Condition notEmpty = lock.newCondition(); // waiting for not empty
 
     public void put(Object x) throws InterruptedException{
