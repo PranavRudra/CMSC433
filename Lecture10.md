@@ -82,9 +82,12 @@ public class TaskExecutionWebServer{
 
 ## Thread Pools
 
-- `static ExecutorService newCachedThreadPool()`: creates as many threads as needed, but will reuse previously created threads
-- `static ExecutorService newSingleThreadExecutor()`: single worker thread gets work from an unbounded queue
-- `static ScheduledExecutorService newScheduledThreadPool(int corePoolSize)`: schedules commands to run after delay or periodically
+- `static ExecutorService newCachedThreadPool()`
+  - creates as many threads as needed, but will reuse previously created threads
+- `static ExecutorService newSingleThreadExecutor()`
+  - single worker thread gets work from an unbounded queue
+- `static ScheduledExecutorService newScheduledThreadPool(int corePoolSize)`
+  - schedules commands to run after delay or periodically
 
 ## ExecutorService
 
