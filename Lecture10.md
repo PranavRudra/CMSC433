@@ -103,4 +103,4 @@ public class TaskExecutionWebServer{
 
 - `ExecutorService` that can schedule commands to run after a fixed delay, or execute periodically
 - `scheduleAtFixedRate`: schedules command to occur periodically
-- `scheduleWithFixedDelay`: schedules command to occur after a fixed delay
+- `scheduleWithFixedDelay`: schedules command to occur periodically after a fixed delay
