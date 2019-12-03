@@ -157,7 +157,7 @@ public void parallelQuickSortSegment (int[] elts, int first, int size) {
   - but more tasks cannot be executed since all threads in the thread pool are occupied
 
 ```java
-    // no more deadlock issues
+    // no more deadlock issues, unbounded thread pool
     Executors.newCachedThreadPool();
 ```
 
