@@ -153,7 +153,7 @@ public void parallelQuickSortSegment (int[] elts, int first, int size) {
 ```
 
 - mergesort is not tail-recursive so we must use an unbounded thread pool to avoid thread starvation deadlock
-- thread starvation deadlock happens when every thread in (fixed) thread pool blocks on other tasks
+- thread starvation deadlock happens when every thread in (fixed size) thread pool blocks on other tasks
   - but more tasks cannot be executed since all threads in the thread pool are occupied
 
 ```java
