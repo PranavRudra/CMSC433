@@ -79,6 +79,11 @@ public <T> void parallelRecursive(final Executor exec, List<Node<T>> nodes, fina
 }
 ```
 
+- must have a waiting mechanism if tasks are dependent
+  - completion executor service: if you know what all the tasks are
+  - shutdown executor: if you know when tasks will stop being submitted
+  - maintain a count of unfinished tasks: need a counting mechanism like a latch
+
 ```java
 // sequential quicksort
 public static void quickSortSegment (int[] elts, int first, int size) {
