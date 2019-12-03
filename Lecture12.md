@@ -38,7 +38,7 @@ for (int i=0; i < NUMTASKS; i++) {
         public void run() {
             for (j = i*size; j < (i+1)*size; j++)
                 sum[i] += a[j];
-            });
-    }
+        }
+    });
 }
 ```
