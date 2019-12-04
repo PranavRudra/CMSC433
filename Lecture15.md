@@ -2,7 +2,7 @@
 
 ## CAP Theorem
 
-- theorem: no distributed system is safe from partition tolerance, so we must choose between consistency and availability
+- no distributed system is safe from partition tolerance, so we must choose between consistency and availability
   - consistency: every read receives the most recent write (or an error)
   - availability: every request receives a non-error response
   - partition tolerance: system functions despite an arbitrary number of messages being dropped or delayed by network
