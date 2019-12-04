@@ -81,7 +81,7 @@ public class PongActor extends AbstractLoggingActor {
                 // getSelf.path().name() returns runtime name of actor
                 System.out.println(getSelf().path().name() +  ": Let's do it.");
                 getSender().tell("go", getSelf());
-            }else { 
+            } else { 
                 // next stroke
                 System.out.println("Pong");
                 getSender().tell("go", getSelf());
