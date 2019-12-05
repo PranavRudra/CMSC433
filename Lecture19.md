@@ -2,7 +2,7 @@
 
 ## Functions
 
-- parallelize work across threads
+- parallelize work across threads on shared-memory systems
 
 ## Directives
 
