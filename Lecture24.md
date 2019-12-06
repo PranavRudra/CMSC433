@@ -49,3 +49,12 @@
 
 - SJF may cause starvation if shorter processes keep coming in before a longer process
   - aging (increasing priority of process as time progresses) is one possible solution
+
+## Multilevel Queue
+
+- ready queue is partitioned into foreground (interactive) queue and background (batch) queue
+  - foreground queue uses RR
+  - background queue uses FCFS
+- scheduling alternates between the queues
+  - fixed priority scheduling: schedule everything from foreground and then go to background (possibility of starvation)
+  - time slice: each queue gets a certain amount of CPU time to schedule its processes (80% foreground, 20% background)
