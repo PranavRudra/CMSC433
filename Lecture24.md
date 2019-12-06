@@ -42,8 +42,10 @@
   - convoy effect: short process behind long process reduces average waiting time
 - shortest time remaining first (STRF): if process with shorter CPU burst time comes in, preempt current process
 - round robin (RR): each process gets a quantum of CPU time to execute, processes that don't finish are preempted
+  - quantum large -> becomes first-come first-serve
+  - quantum small -> context switching is too intensive
 
 ## Priorities
 
 - SJF may cause starvation if shorter processes keep coming in before a longer process
-- aging (increasing priority of process as time progresses) is one possible solution
+  - aging (increasing priority of process as time progresses) is one possible solution
