@@ -44,7 +44,7 @@
 - round robin (RR): each process gets a quantum of CPU time to execute, processes that don't finish are preempted
   - quantum large -> becomes first-come first-serve
   - quantum small -> context switching is too intensive
-- earliest deadline first (EDF): each process has a deadline, periodic, execution time, processes w/ earliest deadline goes first
+- earliest deadline first (EDF): each process has a deadline, periodic, execution time (earliest deadline goes first)
 
 ## Priorities
 
