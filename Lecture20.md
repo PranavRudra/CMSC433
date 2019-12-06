@@ -122,7 +122,8 @@ public class ConcurrentQueue<E> {
                 if (tailNext != null) {                                 // queue in intermediate state, advance tail
                     tail.compareAndSet(currTail, tailNext);
                 } else {                                                // in quiescent state, try inserting new node
-                    if (curTail.next.compareAndSet(null, newNode)) {    // insertion succeeded, try advancing tail              tail.compareAndSet(curTail, newNode);           // will fail if tail already moved
+                    if (curTail.next.compareAndSet(null, newNode)) {    // insertion succeeded, try advancing tail
+                        tail.compareAndSet(curTail, newNode);           // will fail if tail already moved
                         return true;
                     }
                 }
