@@ -56,5 +56,5 @@
   - foreground queue uses RR
   - background queue uses FCFS
 - scheduling alternates between the queues
-  - fixed priority scheduling: schedule everything from foreground and then go to background (possibility of starvation)
-  - time slice: each queue gets a certain amount of CPU time to schedule its processes (80% foreground, 20% background)
+  - fixed priority scheduling: schedule everything from foreground before background (possible starvation)
+  - time slice: each queue gets some CPU time to schedule its processes (80% to foreground, 20% to background)
