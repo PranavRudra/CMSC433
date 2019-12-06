@@ -40,8 +40,8 @@
 - first come first serve (FCFS): processes are executed as they come in, later processes are queued
 - shortest job first (SJF): processes executed in order of shortest first (by CPU burst time)
   - convoy effect: short process behind long process reduces average waiting time
-- shortest time remaining first (STRF): if process with shorter CPU burst time comes in, preempt current process and switch
-- round robin (RR): each process gets a quantum of CPU time to execute, processes that don't finish are preempted and requeued
+- shortest time remaining first (STRF): if process with shorter CPU burst time comes in, preempt current process
+- round robin (RR): each process gets a quantum of CPU time to execute, processes that don't finish are preempted
 
 ## Priorities
 
