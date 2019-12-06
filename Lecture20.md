@@ -130,4 +130,23 @@ public class ConcurrentQueue<E> {
             }
         }
     }
+    
+    public E take() {
+        for ( ; ;) {
+            Node<E> oldHead = head.get();                               // get current head
+            Node<E> oldTail = tail.get();                               // get current tail
+            Node<E> oldHeadNext = oldHead.next.get();                   // get current head.next
+            if (oldHead == head.get()) {                                // has another take happened?
+                if (oldHead == oldTail) {                               // queue empty or tail being updated
+                    if (oldHeadNext == null)                            // is queue empty? 
+                        return null;         
+                    tail.compareAndSet(oldTail, oldHeadNext);           // tail needs update. try to advance it
+                } else {                                                // no need to deal with tail
+                    if (head.compareAndSet(oldHead, oldHeadNext)) 
+                        return oldHeadNext.item;
+                }
+            }
+        }
+    }
+}
 ```
