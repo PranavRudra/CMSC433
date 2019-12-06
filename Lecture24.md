@@ -22,3 +22,28 @@
 - long term: should a new job be initiated or should it be held
 - medium term: should a running program be temporarily swapped out
 - short term: which thread should be given CPU next, which I/O operation should be sent to disk
+
+## Dispatcher
+
+- gives control of CPU to process selected by the short-term scheduler
+  - switches context
+  - switches to user mode
+  - jumps to proper location in user program to start execution
+
+## Types
+
+- embedded: called as a function at the end of a kernel call, runs as a part of the calling process
+- autonomous: separate process, run at every quantum (scheduler and other processors alternate)
+
+## Algorithms
+
+- first come first serve (FCFS): processes are executed as they come in, later processes are queued
+- shortest job first (SJF): processes executed in order of shortest first (by CPU burst time)
+  - convoy effect: short process behind long process reduces average waiting time
+- shortest time remaining first (STRF): if process with shorter CPU burst time comes in, preempt current process and switch
+- round robin (RR): each process gets a quantum of CPU time to execute, processes that don't finish are preempted and requeued
+
+## Priorities
+
+- SJF may cause starvation if shorter processes keep coming in before a longer process
+- aging (increasing priority of process as time progresses) is one possible solution
