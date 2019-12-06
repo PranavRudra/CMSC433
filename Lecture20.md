@@ -119,7 +119,7 @@ public class ConcurrentQueue<E> {
             Node<E> currTail = tail.get();
             Node<E> tailNext = currTail.next.get();
             if (currTail == tail.get()) {                               // did tail change?
-                if (tailNext!= null) {                                  // queue in intermediate state, advance tail
+                if (tailNext != null) {                                 // queue in intermediate state, advance tail
                     tail.compareAndSet(currTail, tailNext);
                 } else {                                                // in quiescent state, try inserting new node
                     if (curTail.next.compareAndSet(null, newNode)) {    // insertion succeeded, try advancing tail              tail.compareAndSet(curTail, newNode);           // will fail if tail already moved
