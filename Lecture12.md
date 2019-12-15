@@ -2,11 +2,8 @@
 
 ## Loops
 
-- method #1: iterations must be independent
-- method #2: chunk iterations into groups
-
 ```java
-// method #1
+// method #1 (iterations are independent)
 
 // sequential
 for (Element e : collection)
@@ -23,7 +20,7 @@ for (Element e : collection) {
 ```
 
 ```java
-# method #2
+# method #2 (dependent iterations chunked)
 
 // sequential
 sum = 0;
