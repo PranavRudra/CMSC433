@@ -147,7 +147,7 @@ fwrite(fid, sizeof(float),iend - istart + 1,a);
 #pragma omp end master
 // this will be done in parallel
 do_work(istart, iend);
-#pragma ompend parallel 
+#pragma omp end parallel 
 ```
 
 ## single
@@ -169,7 +169,7 @@ fwrite(fid, sizeof(float),iend - istart + 1,a);
 // unlike end master, ^ has an implicit barrier associated with it
 do_work(istart, iend);
 // ^ will be done in parallel
-#pragma ompend parallel 
+#pragma omp end parallel 
 ```
 
 ## critical
