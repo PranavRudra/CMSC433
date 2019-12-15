@@ -54,7 +54,7 @@ public class ForkJoinSum extends RecursiveTask<Long>{
 			
 			left.fork();
 			long t = right.compute();
-			long s =  t +  left.join();
+			long s = t + left.join();
 			
 			return s;
 		}
