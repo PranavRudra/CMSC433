@@ -23,7 +23,7 @@
 
 - asynchronous: senders don't know when messages are received
 - at most once delivery: every message sent is eventually received at most once (no duplication)
-- locally first-in-first-out: messages sent by one actor to another are received in the order sent (excepting lost messages)
+- locally FIFO: messages sent by one actor to another are received in the order sent (excepting lost messages)
 
 ## Akka
 
