@@ -46,7 +46,7 @@ public class MessagePrinterActor extends AbstractActor {
     }
 }
 
-public class MessageAcknowledgerActorextends AbstractActor{
+public class MessageAcknowledgerActor extends AbstractActor{
     ...
     public void onReceive(Object msg) throws Exception {
         if (msg instanceof String) {
