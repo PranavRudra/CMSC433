@@ -20,8 +20,8 @@ public class Example extends Thread {
     // Possible data race
     // Time 1: t1 reads cnt into y (y = 0)
     // Time 2: t2 reads cnt into y (y = 0)
-    // Time 3: t1 increments y and sets cnt (cnt = 1)
-    // Time 4: t2 increments y and set cnt (cnt = 1)
+    // Time 3: t1 increments y (y = 1)
+    // Time 4: t2 increments y (y = 1)
     // Time 5: t1 writes to cnt (cnt = 1)
     // Time 6: t1 writes to cnt (cnt = 1)
 }
