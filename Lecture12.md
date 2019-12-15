@@ -140,7 +140,7 @@ public void parallelQuickSortSegment (int[] elts, int first, int size) {
 
 - naive parallelized quicksort creates ~k/2 tasks for sorting k elements (way too many)
 - N_threads = N_CPU * Util_CPU * (1 + Wait/Compute)
-- N_threads = N_CPU + 1 (Util_CPU, Wait/Compute aboue  is very low for sorting, +1 to avoid deadlock)
+- N_threads = N_CPU + 1 (Util_CPU, Wait/Compute are very low for sorting, +1 to avoid deadlock)
 - set the size of the sequential task limit to (k / N_threads) if k is the number of elements that we are sorting
 
 ```java
