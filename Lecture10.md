@@ -94,7 +94,7 @@ public class TaskExecutionWebServer{
 
 ## CompletionService
 
-- interface extending `ExecutionService` with a blocking completion queue
+- interface extending `ExecutorService` with a blocking completion queue
 - when submitted task finishes, a `Future` for it is put in the completion queue
 - user of the completion service can perform a `take()` on the completion queue
 
