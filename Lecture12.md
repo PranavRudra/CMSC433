@@ -54,7 +54,7 @@ public<T> void sequentialRecursive(List<Node<T>> nodes, Collection<T> results) {
     }
 }
 
-// parallelized DFS
+// parallelized DFS (possible in this way since sequential DFS is tail-recursive)
 public <T> Collection<T> getParallelResults(List<Node<T>> nodes) throws InterruptedException {
     ExecutorService exec = Executors.newCachedThreadPool();
     Queue<T> resultQueue = new ConcurrentLinkedQueue<T>();
