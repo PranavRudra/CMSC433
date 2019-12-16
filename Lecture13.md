@@ -32,4 +32,16 @@
 
 ## Terminal Operations
 
-- 
+- `forEach`
+- `forEachOrdered`
+- `toArray`
+- `reduce`
+- `collect`
+- `min`
+- `max`
+- `count`
+- `anyMatch`
+- `allMatch`
+- `noneMatch`
+- `findFirst`
+- `findAny`
