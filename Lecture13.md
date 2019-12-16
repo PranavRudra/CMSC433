@@ -21,14 +21,14 @@
   
 ## Nonterminal Operations
 
-- filter(Predicate)
-- map(Function)
-- flatMap(Function)
-- sorted(Comparator)
-- peek(Consumer)
-- distinct()
-- limit(long n)
-- skip(long n)
+- `filter(predicate)`
+- `map(function)`
+- `flatMap(function)`
+- `sorted(comparator)`
+- `peek(consumer)`
+- `distinct()`
+- `limit(long n)`
+- `skip(long n)`
 
 ## Terminal Operations
 
