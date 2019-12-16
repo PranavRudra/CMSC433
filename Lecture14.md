@@ -145,9 +145,9 @@ getSelf().path().name();    // gives the name of the calling actor
 - options
   - resume: `createReceive()` is re-invoked (message being processed is lost but not queued messages)
   - stop: kills the actor after the finishing processing of the message it's currently working on
-   - kill is propagated to all of the actor's descendants as well
+    - kill is propagated to all of the actor's descendants as well
   - escalate: throw the same exception as child and hand off responsibility to parent
-  - restart: creates a new instance of the actor, gives it all the queued messages of the failed child, invokes `createReceive()`
+  - restart: creates new instance of actor, gives it all queued messages of the failed child, invokes `createReceive()`
 
 ### Strategies
 
