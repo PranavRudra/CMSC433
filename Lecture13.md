@@ -18,3 +18,7 @@
 - `range(end)`, `rangeClosed(start, end)`: return a stream of all elements in the range (nonterminal)
 - `Stream.iterate(start, predicate)`, `Stream.generate()`: return infinite streams 
   - possible because of lazy evaluation
+  
+## Intermediate Operations
+
+- 
