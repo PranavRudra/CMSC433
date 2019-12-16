@@ -19,6 +19,17 @@
 - `Stream.iterate(start, predicate)`, `Stream.generate()`: return infinite streams 
   - possible because of lazy evaluation
   
-## Intermediate Operations
+## Nonterminal Operations
+
+- filter(Predicate)
+- map(Function)
+- flatMap(Function)
+- sorted(Comparator)
+- peek(Consumer)
+- distinct()
+- limit(long n)
+- skip(long n)
+
+## Terminal Operations
 
 - 
